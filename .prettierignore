@@ -1,0 +1,9 @@
+node_modules
+.vscode
+dist
+build
+*.min.js
+*.min.css
+video
+fonts
+images
