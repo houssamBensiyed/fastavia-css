@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Contact - Festava Live Music Festival 2025</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Reset and Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* CSS Variables - Dark Mode */
+      :root {
+        --white-color: #ffffff;
+        --primary-color: #f8cb2e;
+        --secondary-color: #ee5007;
+        --dark-bg: #0a0a0a;
+        --dark-card: rgba(26, 26, 26, 0.95);
+        --dark-card-solid: #1a1a1a;
+        --dark-border: rgba(42, 42, 42, 0.5);
+        --dark-hover: rgba(37, 37, 37, 0.95);
+        --text-primary: #ffffff;
+        --text-secondary: #b0b0b0;
+        --text-muted: #808080;
+
+        --body-font-family: "Outfit", sans-serif;
+
+        --h1-font-size: 48px;
+        --h2-font-size: 36px;
+        --h3-font-size: 28px;
+        --h4-font-size: 24px;
+        --h5-font-size: 20px;
+        --h6-font-size: 18px;
+        --p-font-size: 16px;
+        --btn-font-size: 14px;
+        --copyright-font-size: 14px;
+
+        --border-radius-large: 100px;
+        --border-radius-medium: 16px;
+        --border-radius-small: 8px;
+
+        --font-weight-light: 300;
+        --font-weight-normal: 400;
+        --font-weight-bold: 700;
+      }
+
+      /* Typography */
+      body {
+        background-color: var(--dark-bg);
+        font-family: var(--body-font-family);
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        color: var(--text-primary);
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: var(--text-primary);
+        font-weight: var(--font-weight-bold);
+        margin-bottom: 1rem;
+      }
+
+      h1 {
+        font-size: var(--h1-font-size);
+      }
+      h2 {
+        font-size: var(--h2-font-size);
+      }
+      h3 {
+        font-size: var(--h3-font-size);
+      }
+      h4 {
+        font-size: var(--h4-font-size);
+      }
+      h5 {
+        font-size: var(--h5-font-size);
+      }
+
+      p {
+        color: var(--text-secondary);
+        font-size: var(--p-font-size);
+        font-weight: var(--font-weight-light);
+        margin-bottom: 1rem;
+      }
+
+      a {
+        color: var(--primary-color);
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+
+      a:hover {
+        color: var(--secondary-color);
+      }
+
+      strong {
+        color: var(--dark-color);
+      }
+
+      /* Video Background */
+      .video-wrap {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+      }
+
+      .custom-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .video-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: -1;
+      }
+
+      /* Container */
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Button Styles */
+      .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: var(--border-radius-large);
+        font-size: var(--btn-font-size);
+        font-weight: var(--font-weight-bold);
+        text-align: center;
+        transition: all 0.3s;
+        cursor: pointer;
+        border: 2px solid transparent;
+      }
+
+      .custom-btn {
+        background: var(--secondary-color);
+        color: var(--white-color);
+      }
+
+      .custom-btn:hover {
+        background: #c01f27;
+        color: var(--white-color);
+        transform: translateY(-2px);
+      }
+
+      /* Site Header */
+      .site-header {
+        background-color: var(--primary-color);
+        padding: 12px 0;
+        position: relative;
+        z-index: 1000;
+      }
+
+      .site-header p {
+        margin: 0;
+        display: flex;
+        align-items: center;
+      }
+
+      .custom-icon {
+        color: var(--secondary-color);
+        margin-right: 8px;
+      }
+
+      /* Navigation */
+      .navbar {
+        background-color: rgba(0, 0, 0, 0.95);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        padding: 20px 0;
+        border-bottom: 1px solid var(--dark-border);
+        backdrop-filter: blur(10px);
+      }
+
+      .nav-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .navbar-brand {
+        color: var(--white-color);
+        font-size: var(--h5-font-size);
+        font-weight: var(--font-weight-bold);
+      }
+
+      .navbar-brand:hover {
+        color: var(--primary-color);
+      }
+
+      /* Desktop Navigation */
+      .navbar-nav {
+        display: flex;
+        list-style: none;
+        gap: 1rem;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+      }
+
+      .nav-item {
+        list-style: none;
+      }
+
+      .nav-link {
+        color: var(--text-secondary);
+        font-size: var(--p-font-size);
+        padding: 10px 20px;
+        border-radius: var(--border-radius-large);
+        transition: all 0.3s;
+      }
+
+      .nav-link:hover {
+        color: var(--primary-color);
+        background: rgba(248, 203, 46, 0.1);
+      }
+
+      .nav-link.active {
+        color: var(--primary-color);
+        background: rgba(248, 203, 46, 0.15);
+      }
+
+      /* Mobile Menu Toggle */
+      #nav-toggle {
+        display: none;
+      }
+
+      .nav-toggle-label {
+        display: none;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .nav-toggle-label span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background: var(--white-color);
+        position: absolute;
+        transition: all 0.3s;
+      }
+
+      .nav-toggle-label span:nth-child(1) {
+        top: 5px;
+      }
+      .nav-toggle-label span:nth-child(2) {
+        top: 12px;
+      }
+      .nav-toggle-label span:nth-child(3) {
+        top: 19px;
+      }
+
+      .nav-menu {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .mobile-btn {
+        display: none;
+      }
+
+      /* Main Content */
+      .main-content {
+        min-height: calc(100vh - 200px);
+        padding: 60px 0;
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Contact Section */
+      .contact-section {
+        padding: 0;
+        position: relative;
+        z-index: 1;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .section-header h1 {
+        color: var(--primary-color);
+        margin-bottom: 15px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .section-header p {
+        max-width: 600px;
+        margin: 0 auto;
+        color: var(--text-secondary);
+      }
+
+      .contact-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+      /* Contact Form with Glass Effect */
+      .contact-form-wrapper {
+        background: var(--dark-card);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 40px;
+        border-radius: var(--border-radius-medium);
+        border: 1px solid var(--dark-border);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      }
+
+      .contact-form-wrapper h3 {
+        color: var(--primary-color);
+        margin-bottom: 30px;
+      }
+
+      .form-group {
+        margin-bottom: 25px;
+      }
+
+      .form-group label {
+        display: block;
+        color: var(--text-secondary);
+        font-weight: var(--font-weight-normal);
+        margin-bottom: 8px;
+        font-size: 14px;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 12px 16px;
+        background: rgba(10, 10, 10, 0.5);
+        border: 1px solid var(--dark-border);
+        border-radius: var(--border-radius-small);
+        font-size: 15px;
+        font-family: var(--body-font-family);
+        color: var(--text-primary);
+        transition: all 0.3s;
+        backdrop-filter: blur(5px);
+      }
+
+      .form-control:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        background: rgba(10, 10, 10, 0.7);
+      }
+
+      .form-control::placeholder {
+        color: var(--text-muted);
+      }
+
+      textarea.form-control {
+        resize: vertical;
+        min-height: 120px;
+      }
+
+      .submit-btn {
+        width: 100%;
+        padding: 14px;
+        background: var(--primary-color);
+        color: var(--dark-bg);
+        border: none;
+        border-radius: var(--border-radius-small);
+        font-size: 16px;
+        font-weight: var(--font-weight-bold);
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      .submit-btn:hover {
+        background: #e6b91f;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(248, 203, 46, 0.3);
+      }
+
+      /* Contact Info */
+      .contact-info-wrapper {
+        padding: 0;
+      }
+
+      .contact-info-wrapper h3 {
+        color: var(--primary-color);
+        margin-bottom: 30px;
+      }
+
+      .info-cards {
+        display: grid;
+        gap: 20px;
+      }
+
+      .info-card {
+        background: var(--dark-card);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 25px;
+        border-radius: var(--border-radius-medium);
+        border: 1px solid var(--dark-border);
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        transition: all 0.3s;
+        box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .info-card:hover {
+        border-color: var(--primary-color);
+        transform: translateX(5px);
+        box-shadow: 0 8px 24px 0 rgba(248, 203, 46, 0.2);
+      }
+
+      .info-icon {
+        width: 45px;
+        height: 45px;
+        background: rgba(248, 203, 46, 0.15);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        flex-shrink: 0;
+      }
+
+      .info-content h4 {
+        color: var(--text-primary);
+        margin-bottom: 5px;
+        font-size: 16px;
+      }
+
+      .info-content p,
+      .info-content a {
+        color: var(--text-secondary);
+        margin: 0;
+        font-size: 14px;
+      }
+
+      .info-content a:hover {
+        color: var(--primary-color);
+      }
+
+      /* FAQ Section with Glass Effect */
+      .faq-section {
+        margin-top: 80px;
+        padding: 60px 0;
+        border-top: 1px solid var(--dark-border);
+        position: relative;
+        z-index: 1;
+      }
+
+      .faq-section h2 {
+        text-align: center;
+        color: var(--primary-color);
+        margin-bottom: 40px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .faq-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .faq-item {
+        background: var(--dark-card);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        margin-bottom: 15px;
+        border-radius: var(--border-radius-small);
+        border: 1px solid var(--dark-border);
+        overflow: hidden;
+        box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .faq-question {
+        padding: 20px 25px;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.3s;
+      }
+
+      .faq-question:hover {
+        background: rgba(248, 203, 46, 0.05);
+      }
+
+      .faq-question h4 {
+        margin: 0;
+        color: var(--text-primary);
+        padding-right: 40px;
+        font-size: 16px;
+      }
+
+      .faq-question::after {
+        content: "+";
+        position: absolute;
+        right: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 24px;
+        color: var(--primary-color);
+        transition: all 0.3s;
+      }
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+
+      .faq-answer-content {
+        padding: 0 25px 20px;
+        color: var(--text-secondary);
+      }
+
+      .faq-item input[type="checkbox"] {
+        display: none;
+      }
+
+      .faq-item input[type="checkbox"]:checked ~ .faq-answer {
+        max-height: 300px;
+      }
+
+      .faq-item input[type="checkbox"]:checked ~ .faq-question::after {
+        transform: translateY(-50%) rotate(45deg);
+      }
+
+      /* Social Icons */
+      .social-icon {
+        display: flex;
+        list-style: none;
+        gap: 0.5rem;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+      }
+
+      .social-icon-item {
+        list-style: none;
+      }
+
+      .social-icon-link {
+        background: var(--secondary-color);
+        border-radius: 50%;
+        color: var(--white-color);
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+        font-size: 16px;
+      }
+
+      .social-icon-link:hover {
+        background: var(--primary-color);
+        color: var(--white-color);
+        transform: rotate(360deg);
+      }
+
+      /* Footer */
+      .site-footer {
+        background-color: rgba(0, 0, 0, 0.95);
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 30px;
+        border-top: 1px solid var(--dark-border);
+        backdrop-filter: blur(10px);
+        z-index: 10;
+        margin-top: 60px;
+      }
+
+      .site-footer-top {
+        background-color: var(--secondary-color);
+        padding: 30px 0;
+        margin-bottom: 70px;
+      }
+
+      .footer-top-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .footer-top-row h2 {
+        color: var(--white-color);
+      }
+
+      .footer-row {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .site-footer-title {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+      }
+
+      .site-footer-links {
+        list-style: none;
+        padding: 0;
+      }
+
+      .site-footer-link-item {
+        display: inline-block;
+        margin-right: 15px;
+        margin-bottom: 10px;
+      }
+
+      .site-footer-link {
+        color: var(--white-color);
+      }
+
+      .site-footer-link:hover {
+        color: var(--primary-color);
+      }
+
+      .site-footer-bottom {
+        border-top: 1px solid #1f1c1c;
+        margin-top: 60px;
+        padding-top: 30px;
+      }
+
+      .footer-bottom-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .copyright-text {
+        color: var(--white-color);
+        font-size: var(--copyright-font-size);
+        margin: 0;
+      }
+
+      /* Responsive Design */
+      @media screen and (max-width: 991px) {
+        h1 {
+          font-size: 36px;
+        }
+        h2 {
+          font-size: 28px;
+        }
+        h3 {
+          font-size: 24px;
+        }
+
+        .navbar {
+          background-color: rgba(0, 0, 0, 0.98);
+        }
+
+        .nav-toggle-label {
+          display: block;
+          z-index: 1001;
+        }
+
+        .nav-menu {
+          position: fixed;
+          top: 0;
+          right: -100%;
+          width: 80%;
+          max-width: 400px;
+          height: 100vh;
+          background-color: var(--dark-card-solid);
+          flex-direction: column;
+          padding: 80px 30px 30px;
+          transition: right 0.3s ease;
+          z-index: 1000;
+          border-left: 1px solid var(--dark-border);
+        }
+
+        #nav-toggle:checked ~ .nav-menu {
+          right: 0;
+        }
+
+        #nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
+          transform: rotate(45deg);
+          top: 12px;
+        }
+
+        #nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
+          opacity: 0;
+        }
+
+        #nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
+          transform: rotate(-45deg);
+          top: 12px;
+        }
+
+        .navbar-nav {
+          flex-direction: column;
+          width: 100%;
+          gap: 0;
+        }
+
+        .nav-link {
+          display: block;
+          width: 100%;
+          padding: 15px;
+        }
+
+        .desktop-btn {
+          display: none;
+        }
+
+        .mobile-btn {
+          display: inline-block;
+          margin-right: 10px;
+        }
+
+        .contact-container {
+          grid-template-columns: 1fr;
+        }
+
+        .footer-top-row,
+        .footer-bottom-row {
+          flex-direction: column;
+          text-align: center;
+          gap: 1rem;
+        }
+
+        .footer-row {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        h1 {
+          font-size: 28px;
+        }
+        h2 {
+          font-size: 24px;
+        }
+
+        .contact-form-wrapper {
+          padding: 25px;
+        }
+
+        .info-card {
+          padding: 20px;
+        }
+
+        .faq-question {
+          padding: 15px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Video Background -->
+    <div class="video-wrap">
+      <video autoplay loop muted class="custom-video">
+        <source src="video/pexels-2022395.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="video-overlay"></div>
+
+    <!-- Site Header -->
+    <header class="site-header">
+      <div class="container">
+        <p>
+          <span class="custom-icon">👤</span>
+          <strong>Welcome to Music Festival 2025</strong>
+        </p>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a class="navbar-brand" href="index.html">Festava Live</a>
+
+          <a href="ticket.html" class="btn custom-btn mobile-btn">Buy Ticket</a>
+
+          <input type="checkbox" id="nav-toggle" />
+          <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+
+          <div class="nav-menu">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./artists.html">Artists</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./schedule.html">Schedule</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pricing.html">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./contact.html">Contact</a>
+              </li>
+            </ul>
+            <a href="ticket.html" class="btn custom-btn desktop-btn"
+              >Buy Ticket</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section class="contact-section">
+        <div class="container">
+          <div class="section-header">
+            <h1>Contact Us</h1>
+            <p>
+              Have questions about the festival? We're here to help. Send us a
+              message and we'll respond as soon as possible.
+            </p>
+          </div>
+
+          <div class="contact-container">
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+              <h3>Send Message</h3>
+              <form action="#" method="POST">
+                <div class="form-group">
+                  <label for="name">Full Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-control"
+                    placeholder="John Doe"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-control"
+                    placeholder="john@example.com"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    class="form-control"
+                    placeholder="How can we help?"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form-control"
+                    placeholder="Your message here..."
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+              </form>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="contact-info-wrapper">
+              <h3>Get In Touch</h3>
+              <p style="margin-bottom: 30px; color: var(--text-secondary)">
+                Feel free to reach out through any of these channels.
+              </p>
+
+              <div class="info-cards">
+                <div class="info-card">
+                  <div class="info-icon">📍</div>
+                  <div class="info-content">
+                    <h4>Address</h4>
+                    <p>National Center, United States</p>
+                  </div>
+                </div>
+
+                <div class="info-card">
+                  <div class="info-icon">📞</div>
+                  <div class="info-content">
+                    <h4>Phone</h4>
+                    <a href="tel:090-080-0760">090-080-0760</a>
+                  </div>
+                </div>
+
+                <div class="info-card">
+                  <div class="info-icon">✉️</div>
+                  <div class="info-content">
+                    <h4>Email</h4>
+                    <a href="mailto:hello@festava.com">hello@festava.com</a>
+                  </div>
+                </div>
+
+                <div class="info-card">
+                  <div class="info-icon">🕐</div>
+                  <div class="info-content">
+                    <h4>Working Hours</h4>
+                    <p>Mon-Fri: 9AM-6PM</p>
+                  </div>
+                </div>
+
+                <div class="info-card">
+                  <div class="info-icon">🎫</div>
+                  <div class="info-content">
+                    <h4>Ticket Support</h4>
+                    <a href="mailto:tickets@festava.com">tickets@festava.com</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Section -->
+          <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+              <div class="faq-item">
+                <input type="checkbox" id="faq1" />
+                <label class="faq-question" for="faq1">
+                  <h4>How can I purchase tickets?</h4>
+                </label>
+                <div class="faq-answer">
+                  <div class="faq-answer-content">
+                    <p>
+                      Tickets can be purchased directly through our website by
+                      clicking the "Buy Ticket" button. We accept all major
+                      credit cards and PayPal.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <input type="checkbox" id="faq2" />
+                <label class="faq-question" for="faq2">
+                  <h4>Is parking available?</h4>
+                </label>
+                <div class="faq-answer">
+                  <div class="faq-answer-content">
+                    <p>
+                      Yes, ample parking is available at the venue. VIP ticket
+                      holders receive complimentary parking passes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <input type="checkbox" id="faq3" />
+                <label class="faq-question" for="faq3">
+                  <h4>What is the refund policy?</h4>
+                </label>
+                <div class="faq-answer">
+                  <div class="faq-answer-content">
+                    <p>
+                      Refunds are available up to 30 days before the event.
+                      After this date, tickets can be transferred to another
+                      person.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <input type="checkbox" id="faq4" />
+                <label class="faq-question" for="faq4">
+                  <h4>Are there age restrictions?</h4>
+                </label>
+                <div class="faq-answer">
+                  <div class="faq-answer-content">
+                    <p>
+                      The festival is open to all ages. Children under 12 enter
+                      free when accompanied by a paying adult.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="site-footer-top">
+        <div class="container">
+          <div class="footer-top-row">
+            <h2>Festava Live</h2>
+            <ul class="social-icon">
+              <li class="social-icon-item">
+                <a href="#" class="social-icon-link">t</a>
+              </li>
+              <li class="social-icon-item">
+                <a href="#" class="social-icon-link">a</a>
+              </li>
+              <li class="social-icon-item">
+                <a href="#" class="social-icon-link">i</a>
+              </li>
+              <li class="social-icon-item">
+                <a href="#" class="social-icon-link">y</a>
+              </li>
+              <li class="social-icon-item">
+                <a href="#" class="social-icon-link">p</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="footer-row">
+          <div>
+            <h5 class="site-footer-title">Links</h5>
+            <ul class="site-footer-links">
+              <li class="site-footer-link-item">
+                <a href="index.html" class="site-footer-link">Home</a>
+              </li>
+              <li class="site-footer-link-item">
+                <a href="about.html" class="site-footer-link">About</a>
+              </li>
+              <li class="site-footer-link-item">
+                <a href="artists.html" class="site-footer-link">Artists</a>
+              </li>
+              <li class="site-footer-link-item">
+                <a href="schedule.html" class="site-footer-link">Schedule</a>
+              </li>
+              <li class="site-footer-link-item">
+                <a href="pricing.html" class="site-footer-link">Pricing</a>
+              </li>
+              <li class="site-footer-link-item">
+                <a href="contact.html" class="site-footer-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 class="site-footer-title">Have a question?</h5>
+            <p style="margin: 5px 0">
+              <a href="tel:090-080-0760" class="site-footer-link"
+                >090-080-0760</a
+              >
+            </p>
+            <p style="margin: 5px 0">
+              <a href="mailto:hello@company.com" class="site-footer-link"
+                >hello@company.com</a
+              >
+            </p>
+          </div>
+
+          <div>
+            <h5 class="site-footer-title">Location</h5>
+            <p style="color: white">
+              Silang Junction South, Tagaytay, Cavite, Philippines
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-footer-bottom">
+        <div class="container">
+          <div class="footer-bottom-row">
+            <p class="copyright-text">Copyright © SaiyansCoders</p>
+            <ul class="site-footer-links">
+              <li class="site-footer-link-item">
+                <a href="#" class="site-footer-link">Terms & Conditions</a>
+              </li>
+              <li class="site-footer-link-item">
+                <a href="#" class="site-footer-link">Privacy Policy</a>
+              </li>
+              <li class="site-footer-link-item">
+                <a href="#" class="site-footer-link">Your Feedback</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
