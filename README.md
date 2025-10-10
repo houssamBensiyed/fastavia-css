@@ -83,10 +83,4 @@ This repo is currently a simple static site. To contribute:
 
 If you want help improving the site (layout, accessibility, or converting to a build system like a static site generator), open an issue describing what you want to do.
 
-## License
-
-No license file is included in this repository. If you want to make this project open source, add a `LICENSE` file (for example MIT or Apache 2.0).
-
-## Contact
-
 For questions about this repository, update requests, or help converting it into a larger project, open an issue in the repository or reach out to the maintainer.
